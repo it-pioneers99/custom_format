@@ -1,0 +1,146 @@
+/* Custom Report Styles - Applied to ALL Reports */
+/* Maximum specificity to override default styles */
+
+/* Fade Up Animation for all report containers */
+.datatable-wrapper,
+.datatable,
+.report-wrapper,
+.report-view,
+#page-query-report .report-wrapper {
+    animation: fadeUp 0.5s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   DATATABLE ROWS - Odd/Even Styling (exclude headers)
+   ============================================ */
+div.datatable-wrapper div.dt-scrollable div.dt-row.vrow[data-row-index]:nth-child(odd):not(.dt-row-header):not(.dt-row-filter),
+div.datatable div.dt-scrollable div.dt-row.vrow[data-row-index]:nth-child(odd):not(.dt-row-header):not(.dt-row-filter),
+.datatable-wrapper .dt-scrollable .dt-row.vrow[data-row-index]:nth-child(odd):not(.dt-row-header):not(.dt-row-filter),
+.datatable .dt-scrollable .dt-row.vrow[data-row-index]:nth-child(odd):not(.dt-row-header):not(.dt-row-filter) {
+    background-color: #fff !important;
+}
+
+div.datatable-wrapper div.dt-scrollable div.dt-row.vrow[data-row-index]:nth-child(odd) div.dt-cell,
+div.datatable div.dt-scrollable div.dt-row.vrow[data-row-index]:nth-child(odd) div.dt-cell,
+.datatable-wrapper .dt-scrollable .dt-row.vrow[data-row-index]:nth-child(odd) .dt-cell,
+.datatable .dt-scrollable .dt-row.vrow[data-row-index]:nth-child(odd) .dt-cell {
+    background-color: #fff !important;
+}
+
+div.datatable-wrapper div.dt-scrollable div.dt-row.vrow[data-row-index]:nth-child(even):not(.dt-row-header):not(.dt-row-filter),
+div.datatable div.dt-scrollable div.dt-row.vrow[data-row-index]:nth-child(even):not(.dt-row-header):not(.dt-row-filter),
+.datatable-wrapper .dt-scrollable .dt-row.vrow[data-row-index]:nth-child(even):not(.dt-row-header):not(.dt-row-filter),
+.datatable .dt-scrollable .dt-row.vrow[data-row-index]:nth-child(even):not(.dt-row-header):not(.dt-row-filter) {
+    background-color: #e4eaf1 !important;
+}
+
+div.datatable-wrapper div.dt-scrollable div.dt-row.vrow[data-row-index]:nth-child(even) div.dt-cell,
+div.datatable div.dt-scrollable div.dt-row.vrow[data-row-index]:nth-child(even) div.dt-cell,
+.datatable-wrapper .dt-scrollable .dt-row.vrow[data-row-index]:nth-child(even) .dt-cell,
+.datatable .dt-scrollable .dt-row.vrow[data-row-index]:nth-child(even) .dt-cell {
+    background-color: #e4eaf1 !important;
+}
+
+/* ============================================
+   HOVER EFFECTS - Only Body Rows (exclude headers)
+   ============================================ */
+div.datatable-wrapper div.dt-scrollable div.dt-row.vrow:hover:not(.dt-row-header):not(.dt-row-filter),
+div.datatable div.dt-scrollable div.dt-row.vrow:hover:not(.dt-row-header):not(.dt-row-filter),
+.datatable-wrapper .dt-scrollable .dt-row.vrow:hover:not(.dt-row-header):not(.dt-row-filter),
+.datatable .dt-scrollable .dt-row.vrow:hover:not(.dt-row-header):not(.dt-row-filter),
+.report-wrapper .dt-row:hover:not(.dt-row-header):not(.dt-row-filter),
+.report-view .dt-row:hover:not(.dt-row-header):not(.dt-row-filter),
+.report-wrapper .list-row:hover:not(.dt-row-header):not(.dt-row-filter),
+.report-view .list-row:hover:not(.dt-row-header):not(.dt-row-filter) {
+    background-color: #e4eaf1 !important;
+}
+
+div.datatable-wrapper div.dt-scrollable div.dt-row.vrow:hover div.dt-cell,
+div.datatable div.dt-scrollable div.dt-row.vrow:hover div.dt-cell,
+.datatable-wrapper .dt-scrollable .dt-row.vrow:hover .dt-cell,
+.datatable .dt-scrollable .dt-row.vrow:hover .dt-cell,
+.report-wrapper .dt-row:hover .dt-cell,
+.report-view .dt-row:hover .dt-cell {
+    background-color: #e4eaf1 !important;
+}
+
+/* ============================================
+   STANDARD TABLE ROWS - ONLY TBODY (exclude thead)
+   ============================================ */
+.report-wrapper table tbody tr:nth-child(odd):not(.dt-row-header):not(.dt-row-filter),
+.report-view table tbody tr:nth-child(odd):not(.dt-row-header):not(.dt-row-filter),
+#page-query-report table tbody tr:nth-child(odd):not(.dt-row-header):not(.dt-row-filter),
+table tbody tr:nth-child(odd):not(thead tr):not(.dt-row-header):not(.dt-row-filter) {
+    background-color: #fff !important;
+}
+
+.report-wrapper table tbody tr:nth-child(even):not(.dt-row-header):not(.dt-row-filter),
+.report-view table tbody tr:nth-child(even):not(.dt-row-header):not(.dt-row-filter),
+#page-query-report table tbody tr:nth-child(even):not(.dt-row-header):not(.dt-row-filter),
+table tbody tr:nth-child(even):not(thead tr):not(.dt-row-header):not(.dt-row-filter) {
+    background-color: #e4eaf1 !important;
+}
+
+.report-wrapper table tbody tr:hover:not(.dt-row-header):not(.dt-row-filter),
+.report-view table tbody tr:hover:not(.dt-row-header):not(.dt-row-filter),
+#page-query-report table tbody tr:hover:not(.dt-row-header):not(.dt-row-filter),
+table tbody tr:hover:not(thead tr):not(.dt-row-header):not(.dt-row-filter) {
+    background-color: #e4eaf1 !important;
+}
+
+/* Exclude thead rows explicitly */
+table thead tr,
+table thead tr th,
+.report-wrapper table thead tr,
+.report-view table thead tr,
+#page-query-report table thead tr {
+    background-color: transparent !important;
+}
+
+/* ============================================
+   LIST VIEW ROWS (Report Builder)
+   ============================================ */
+.report-wrapper .list-row:nth-child(odd),
+.report-view .list-row:nth-child(odd),
+.report-wrapper .result .dt-row:nth-child(odd),
+.report-view .result .dt-row:nth-child(odd) {
+    background-color: #fff !important;
+}
+
+.report-wrapper .list-row:nth-child(even),
+.report-view .list-row:nth-child(even),
+.report-wrapper .result .dt-row:nth-child(even),
+.report-view .result .dt-row:nth-child(even) {
+    background-color: #e4eaf1 !important;
+}
+
+.report-wrapper .list-row:hover,
+.report-view .list-row:hover,
+.report-wrapper .result .dt-row:hover,
+.report-view .result .dt-row:hover {
+    background-color: #e4eaf1 !important;
+}
+
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+.datatable-wrapper .dt-scrollable .dt-row.vrow,
+.datatable .dt-scrollable .dt-row.vrow,
+.report-wrapper .dt-row,
+.report-view .dt-row,
+.report-wrapper table tbody tr,
+.report-view table tbody tr {
+    transition: background-color 0.2s ease !important;
+}
