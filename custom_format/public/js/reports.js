@@ -60,7 +60,6 @@
             table tbody tr:nth-child(even):not(thead tr):not(.dt-row-header):not(.dt-row-filter) {
                 background-color: #e4eaf1 !important;
             }
-                
             /* Exclude thead explicitly */
             table thead tr,
             table thead tr th {
